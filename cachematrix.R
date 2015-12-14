@@ -30,7 +30,7 @@
       message("getting cached data")
       return(inv)
     }
-    # if the cached inverse is not existing, calculating it
+    # if the cached inverse is not existing, calculating and caching it in x
     data <- x$get()
     inv <- solve(data, ...)
     x$setinverse(inv)
